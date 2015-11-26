@@ -21,8 +21,14 @@ CrochetsDown::CrochetsDown() {
 
 // Called just before this Command runs the first time
 void CrochetsDown::Initialize() {
-	
+	if(Robot::crochets->MinAtteint()){
+		Robot::crochets->MoteurStop();
+	}
+	else {
+		Robot::crochets->MoteurDown();
+	}
 }
+
 
 // Called repeatedly when this Command is scheduled to run
 void CrochetsDown::Execute() {
@@ -42,5 +48,4 @@ void CrochetsDown::End() {
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
 void CrochetsDown::Interrupted() {
-
 }

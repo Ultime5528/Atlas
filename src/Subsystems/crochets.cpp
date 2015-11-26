@@ -38,6 +38,32 @@ bool crochets::MaxAtteint(){
 		return false;
 	}
 }
+
+bool crochets::MinAtteint(){
+	if(pot->Get()<0.08){
+		return true;
+	}
+	else{
+		return false;
+	}
+
+}
+
+/*
+void crochets::ValeursPot(){
+	SmartDashboard->PutNumber("Potentiomètre",pot->Get());
+}
+*/
+void crochets::MoteurUp(){
+	Robot::crochets->moteurCrochets->Set(1);
+}
+void crochets::MoteurDown(){
+	Robot::crochets->moteurCrochets->Set(-1);
+}
+void crochets::MoteurStop(){
+	Robot::crochets->moteurCrochets->Set(0);
+}
+
 // Put methods for controlling this subsystem
 // here. Call these from Commands.
 

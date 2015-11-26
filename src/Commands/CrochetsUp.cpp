@@ -8,7 +8,6 @@
 // update. Deleting the comments indicating the section will prevent
 // it from being updated in the future.
 
-
 #include "CrochetsUp.h"
 
 CrochetsUp::CrochetsUp() {
@@ -21,17 +20,19 @@ CrochetsUp::CrochetsUp() {
 
 // Called just before this Command runs the first time
 void CrochetsUp::Initialize() {
-if(Robot::crochets->MaxAtteint()){
-	
-}
-else{
+
+	if (Robot::crochets->MaxAtteint()) {
+		Robot::crochets->MoteurStop();
+	} else {
+		Robot::crochets->MoteurUp();
+	}
 
 }
-}
+
 
 // Called repeatedly when this Command is scheduled to run
 void CrochetsUp::Execute() {
-	
+
 }
 
 // Make this return true when this Command no longer needs to run execute()
@@ -41,7 +42,7 @@ bool CrochetsUp::IsFinished() {
 
 // Called once after isFinished returns true
 void CrochetsUp::End() {
-	
+
 }
 
 // Called when another command which requires one or more of the same
