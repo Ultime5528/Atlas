@@ -33,6 +33,8 @@ public:
 	void InitDefaultCommand();
 
 	void Drive();
+
+	void Stop();
 };
 
 #endif
