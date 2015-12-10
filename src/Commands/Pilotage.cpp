@@ -12,7 +12,7 @@
 #include "Pilotage.h"
 
 Pilotage::Pilotage() {
-
+	Requires(Robot::basePilotable);
 
 	// Use requires() here to declare subsystem dependencies
 	// eg. requires(chassis);
